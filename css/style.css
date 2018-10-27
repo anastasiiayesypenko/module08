@@ -1,0 +1,341 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    max-width: 320px;
+    margin: 0 auto;
+}
+.header {
+    position: relative;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.promo {
+    max-width: 320px;
+    margin: 0 auto;
+    position: relative;
+}
+.promo-background {
+    position: relative;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.registration-button {
+    position: absolute;
+    width: 90px;
+    height: 36px;
+    top: 20px;
+    z-index: 10;
+    object-fit: contain;
+    border: none;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    background-color: transparent;
+}
+.registration-button:hover {
+    border: 3px solid #fff;
+    border-radius: 20px;
+}
+.left-registration-button {
+    left: 22.5%;
+}
+.right-registration-button {
+    right: 22.5%;
+}
+.title, .subslogan, .submit {
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+}
+.title {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    top: 174px;
+    text-decoration: none;
+}
+.slogan {
+    display: inline-block;
+    max-width: 280px;
+    margin: 20px;
+    position: absolute;
+    text-align: center;
+    z-index: 5;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+    top: 230px;
+    color: #fff;
+}
+.subslogan {
+    top: 306px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center;
+}
+.submit {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 30px;
+    font-size: 14px;
+    border: none;
+    background-color: #ff4e50;
+    border-radius: 20px;
+    top: 362px;
+    width: 280px;
+    height: 40px;
+}
+.main {
+    max-width: 320px;
+    margin: 0 auto;
+}
+.partner {
+    max-width: 200px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    position: relative;
+}
+.partner_tv_icon::after {
+    content: url(../img/partner_icon1.png);
+    display: block;
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    top: 85px;
+    left: 120px;
+    z-index: 100;
+}
+.partner_letter_icon::after {
+    content: url(../img/partner_icon4.png);
+    display: block;
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    top: 85px;
+    left: 120px;
+    z-index: 100;
+}
+.partner_chemistry_icon::after {
+    content: url(../img/partner_icon2.png);
+    display: block;
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    top: 85px;
+    left: 120px;
+    z-index: 100;
+}
+.partner_tea_icon::after {
+    content: url(../img/partner_icon3.png);
+    display: block;
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    top: 85px;
+    left: 120px;
+    z-index: 100;
+}
+.partners-title {
+    margin-top: 70px;
+    margin-left: 8%;
+    display: inline-block;
+    width: 262px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 21.98px;
+    text-align: center;
+    color: #333333;
+}
+.partner-name {
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 13.97px;
+    text-align: center;
+    color: #333333;
+}
+.partner-description {
+    margin-top: 8px;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 13.97px;
+    color: #666666;
+    text-align: center;
+}
+.partners_image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.others-button {
+    width: 280px;
+    height: 40px;
+    color: #ff4e50;
+    border: 3px solid #ff4e50;
+    border-radius: 20px;
+    background-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 57px;
+    margin-left: 18px;
+}
+@media (min-width: 768px) and (max-width: 1439px) {
+    .promo {
+        max-width: 768px;
+    }
+    .wrapper {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+    .navigation {
+        flex-basis: 768px;
+        height: 74px;
+        position: absolute;
+        display: flex;
+        z-index: 8;
+    }
+    .header {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+    .title {
+        position: absolute;
+        top: 49px;
+   
+    }
+    .registration-button {
+        left: 30px;
+        top: 49px;
+        position: absolute;
+    }
+    .slogan {
+        top: 225px;
+        margin-left: 160px;
+        font-size: 51.97px;
+        min-width: 480px;
+    }
+    .subslogan {
+        top: 375px;
+        font-size: 24px;
+    }
+    .submit {
+        top: 440px;
+        width: 225px;
+        font-size: 14px;
+    }
+    .list-of-partners {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 500px;
+    }
+    .partners-title {
+        font-size: 22px;
+        display: block;
+        width: 700px;
+        height: 26px;
+        margin-left: auto;
+        margin-right: auto;
+        object-fit: cover;
+        margin-top: 70px;
+        text-align: center;
+    }
+    .partners-section {
+        margin: 0 auto;
+        width: 500px;
+    }
+    .main {
+        max-width: 768px;
+    }
+    .partner {
+        margin-top: 50px;
+    }
+    .others-button {
+        width: 194px;
+        margin-left: 155px;
+    }
+
+}
+@media (min-width: 1440px) {
+    .promo {
+        max-width: 1440px;
+        overflow: hidden;
+    }
+    .wrapper {
+        position: relative;
+        margin: 0 auto;
+        max-width: 1140px;
+        overflow: hidden;
+    }
+    .promo-background {
+        display: block;
+        max-width: 1140;
+        height: auto;
+    }
+    .title {
+        position: absolute;
+        top: 49px;
+    }
+    .registration-button {
+        left: 30px;
+        top: 49px;
+        position: absolute;
+    }
+    .slogan {
+        top: 225px;
+        margin-left: 300px;
+        font-size: 52px;
+        min-width: 480px; 
+    }
+    .subslogan {
+        top: 375px;
+    }
+    .submit {
+        top: 440px;
+    }
+    .list-of-partners {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .partners-title {
+        display: block;
+        width: 700px;
+        height: 26px;
+        margin-left: auto;
+        margin-right: auto;
+        object-fit: cover;
+        margin-top: 70px;
+        text-align: center;
+    }
+    .main {
+        max-width: 1440px;
+    }
+    .partner {
+        margin-top: 50px;
+    }
+    .others-button {
+        width: 194px;
+        margin-left: 505px;
+    }
+}
