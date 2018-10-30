@@ -4,33 +4,36 @@
     padding: 0;
 }
 .wrapper {
-    max-width: 320px;
+    width: 320px;
     margin: 0 auto;
 }
 .header {
-    position: relative;
-    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 320px;
     margin: 0 auto;
+    z-index: 1;
 }
-
 .promo {
+    position: relative;
     max-width: 320px;
     margin: 0 auto;
-    position: relative;
 }
 .promo-background {
-    position: relative;
     display: block;
     max-width: 100%;
     height: auto;
 }
+.registration {
+    padding: 20px 60px 0 60px;
+    width: 320px;
+    display: flex;
+    justify-content: space-around;
+}
 .registration-button {
-    position: absolute;
     width: 90px;
     height: 36px;
-    top: 20px;
-    z-index: 10;
-    object-fit: contain;
     border: none;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
@@ -43,33 +46,28 @@
     border: 3px solid #fff;
     border-radius: 20px;
 }
-.left-registration-button {
-    left: 22.5%;
-}
-.right-registration-button {
-    right: 22.5%;
-}
-.title, .subslogan, .submit {
-    position: absolute;
-    z-index: 5;
-    left: 50%;
-    transform: translateX(-50%);
+
+.slogan, .subslogan, .submit {
     color: #fff;
+    position: absolute;
 }
 .title {
+    letter-spacing: 0.1em;
+    color: #fff;
+    margin-top: 120px;
+    order: 2;
+    text-align: center;
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
-    top: 174px;
     text-decoration: none;
 }
 .slogan {
     display: inline-block;
-    max-width: 280px;
-    margin: 20px;
-    position: absolute;
+    width: 320px;
+    max-height: 80px;
     text-align: center;
     z-index: 5;
     font-family: 'Montserrat', sans-serif;
@@ -77,11 +75,14 @@
     font-weight: 700;
     font-size: 30px;
     text-transform: uppercase;
-    top: 230px;
+    top: 235px;
     color: #fff;
 }
 .subslogan {
+    display: inline-block;
     top: 306px;
+    margin-left: 45px;
+    width: 230px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 300;
@@ -91,7 +92,6 @@
 .submit {
     font-family: 'Montserrat';
     font-weight: 700;
-    font-size: 30px;
     font-size: 14px;
     border: none;
     background-color: #ff4e50;
@@ -99,13 +99,15 @@
     top: 362px;
     width: 280px;
     height: 40px;
+    text-align: center;
+    margin-left: 20px;
 }
 .main {
-    max-width: 320px;
+    width: 320px;
     margin: 0 auto;
 }
 .partner {
-    max-width: 200px;
+    width: 200px;
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -114,16 +116,6 @@
 }
 .partner_tv_icon::after {
     content: url(../img/partner_icon1.png);
-    display: block;
-    max-width: 100%;
-    height: auto;
-    position: absolute;
-    top: 85px;
-    left: 120px;
-    z-index: 100;
-}
-.partner_letter_icon::after {
-    content: url(../img/partner_icon4.png);
     display: block;
     max-width: 100%;
     height: auto;
@@ -144,6 +136,16 @@
 }
 .partner_tea_icon::after {
     content: url(../img/partner_icon3.png);
+    display: block;
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    top: 85px;
+    left: 120px;
+    z-index: 100;
+}
+.partner_letter_icon::after {
+    content: url(../img/partner_icon4.png);
     display: block;
     max-width: 100%;
     height: auto;
@@ -200,40 +202,50 @@
     margin-left: 18px;
 }
 @media (min-width: 768px) and (max-width: 1439px) {
+    .wrapper {
+        width: 768px;
+    }
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 768px;
+    }
     .promo {
         max-width: 768px;
     }
-    .wrapper {
-        max-width: 768px;
-        margin: 0 auto;
-    }
-    .navigation {
-        flex-basis: 768px;
-        height: 74px;
-        position: absolute;
-        display: flex;
-        z-index: 8;
-    }
-    .header {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
+    .registration {
+        padding: 37px 45px 0 0;
+        width: 250px;
+        justify-content: space-around;
     }
     .title {
-        position: absolute;
-        top: 49px;
-   
-    }
-    .registration-button {
-        left: 30px;
-        top: 49px;
-        position: absolute;
+        margin-top: 37px;
+        margin-left: 50px;
+        order: 0;
     }
     .slogan {
         top: 225px;
-        margin-left: 160px;
+    }
+    .subslogan {
+        margin-left: 200px;
+        width: 400px;
+    }
+    .submit {
+        top: 426px;
+        width: 225px;
+        margin-left: 270px;
+    }
+    .main {
+        width: 768px;
+    }
+    .slogan {
+        display: block;
+        top: 225px;
+        left: 128px;
         font-size: 51.97px;
-        min-width: 480px;
+        width: 550px;
+        text-align: center;
     }
     .subslogan {
         top: 375px;
@@ -265,9 +277,6 @@
         margin: 0 auto;
         width: 500px;
     }
-    .main {
-        max-width: 768px;
-    }
     .partner {
         margin-top: 50px;
     }
@@ -278,42 +287,50 @@
 
 }
 @media (min-width: 1440px) {
+    .wrapper {
+        width: 1440px;
+    }
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 1440px;
+    }
     .promo {
         max-width: 1440px;
-        overflow: hidden;
     }
-    .wrapper {
-        position: relative;
-        margin: 0 auto;
-        max-width: 1140px;
-        overflow: hidden;
-    }
-    .promo-background {
-        display: block;
-        max-width: 1140;
-        height: auto;
+    .registration {
+        padding: 38px 239px 0 0;
+        width: 430px;
+        justify-content: space-between;
     }
     .title {
-        position: absolute;
-        top: 49px;
-    }
-    .registration-button {
-        left: 30px;
-        top: 49px;
-        position: absolute;
+        margin-top: 50px;
+        margin-left: 250px;
+        order: 0;
     }
     .slogan {
-        top: 225px;
-        margin-left: 300px;
+        top: 227px;
+        padding-left: 140px;
+        width: 700px;
         font-size: 52px;
-        min-width: 480px; 
+        margin-left: 300px;
     }
     .subslogan {
+        margin-left: 523px;
+        width: 400px;
+        font-size: 24px;
         top: 375px;
     }
     .submit {
-        top: 440px;
+        top: 426px;
+        width: 225px;
+        margin-left: 602px;
     }
+    .main {
+        width: 900px;
+    }
+   
     .list-of-partners {
         display: flex;
         flex-wrap: wrap;
@@ -328,14 +345,12 @@
         margin-top: 70px;
         text-align: center;
     }
-    .main {
-        max-width: 1440px;
-    }
     .partner {
         margin-top: 50px;
     }
     .others-button {
         width: 194px;
-        margin-left: 505px;
+        margin-left: 350px;
+        margin-top: 40px;
     }
 }
